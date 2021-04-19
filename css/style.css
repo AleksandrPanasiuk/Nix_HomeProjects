@@ -50,7 +50,7 @@ table {
     top: 0;
     left: 15%;
     background: white;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .header:after{
@@ -564,7 +564,35 @@ input:active{
     opacity: 15%;
 }
 
-
+.progress-scrollbar {
+    position: relative;
+    padding: 0;
+}
+.progress-scrollbar:before {
+    content: "";
+    display: block;
+    background: linear-gradient(to right top, #CDDC39 0%, #03A9F4 50%, #e6f0f5 50%);
+    height: calc(100% - 100vh + 6px);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress-scrollbar:after {
+    content: "";
+    display: block;
+    background: #fff;
+    height: calc(100vh - 6px);
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+.progress-wrap {
+    position: relative;
+    z-index: 1;
+    margin-bottom: calc(-100vh + 6px);
+}
 
 
 
